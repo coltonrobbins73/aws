@@ -27,3 +27,15 @@ module "networking" {
   # Pass variables as needed
   # ...
 }
+
+module "api_gateway" {
+  source = "./api-gateway"
+
+  # Pass any necessary variables 
+}
+
+module "lambda" {
+  source = "./lambda"
+
+  # Pass any necessary variables, including the API Gateway ID 
+}
